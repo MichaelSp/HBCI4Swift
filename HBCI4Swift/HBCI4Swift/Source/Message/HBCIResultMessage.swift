@@ -461,15 +461,15 @@ open class HBCIResultMessage {
         // if the bank sends HKTAN#6 and an oder version we assume it is in migration phase
         // we currently set this always to true if a HKTAN#6 is found as the HIPINS segment in a personal dialog is not always reliable
         var hasVersion6 = false;
-        var hasOldVersion = false;
+        //var hasOldVersion = false;
         for segment in self.segments {
             if segment.code == "HITANS" {
                 if segment.version >= 6 {
                     hasVersion6 = true;
                 }
-                if segment.version < 6 {
-                    hasOldVersion = true;
-                }
+                //if segment.version < 6 {
+                //    hasOldVersion = true;
+                //}
             }
         }
         return hasVersion6;

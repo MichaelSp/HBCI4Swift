@@ -69,7 +69,7 @@ class HBCITanProcess_2 {
                     if tanMethod.secfunc == secfunc {
                         // check parameters for the selected Tan Method
                         let needMedia = tanMethod.needTanMedia ?? "0";
-                        let numMedia = tanMethod.numActiveMedia ?? 0;
+                        // let numMedia = tanMethod.numActiveMedia ?? 0;
                         if needMedia == "2" { //&& numMedia > 0 {
                             tanOrder.tanMediumName = dialog.user.tanMediumName;
                             if tanOrder.tanMediumName == nil {
